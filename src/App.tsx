@@ -1,13 +1,15 @@
 import './assets/index.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Home from './pages/Home';
 
 function App() {
   return (
-    <h1
-      className="font-extrabold text-center text-violet-700 text-3xl"
-    >
-      Hello world!
-      With tailwind
-    </h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={ <Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
