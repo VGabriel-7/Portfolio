@@ -2,8 +2,10 @@ import { useEffect } from "react"
 
 import GoBackHome from "../../components/GoBackHome";
 
-import whatsappIcon from '../../images/whatsapp-icon.svg';
-import gmailIcon from '../../images/gmail-icon.svg';
+import {
+  whatsapp,
+  gmail
+}from '../../images';
 
 export default function ContactMe() {
   useEffect(() => {
@@ -20,7 +22,7 @@ export default function ContactMe() {
       >
         <div className="flex justify-evenly">
           <img
-            src={gmailIcon}
+            src={gmail}
             alt="Icone do Gmail"
             className="w-1/6"
           />
@@ -33,7 +35,7 @@ export default function ContactMe() {
           >
 
             <img
-              src={whatsappIcon}
+              src={whatsapp}
               alt="Icone do Whatsapp"
               className="w-full"
             />

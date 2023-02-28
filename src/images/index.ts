@@ -16,6 +16,8 @@ import cartas from './cartas.svg';
 import coroa from './coroa.svg';
 import jest from './jest.svg';
 import musica from './musica.svg';
+import whatsapp from './whatsapp-icon.svg'
+import gmail from './gmail-icon.svg'
 export {
   figma,
   typescript,
@@ -35,4 +37,6 @@ export {
   coroa,
   jest,
   musica,
+  whatsapp,
+  gmail
 }
