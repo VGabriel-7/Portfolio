@@ -1,0 +1,16 @@
+.animated {
+  animation: anima-slide 60s linear infinite;
+}
+
+.animated2 {
+  animation: anima-slide 65s linear infinite;
+}
+
+@keyframes anima-slide {
+  from {
+    transform: translateY(900px);
+  }
+  to {
+    transform: translateY(-1500px);
+  }
+}
