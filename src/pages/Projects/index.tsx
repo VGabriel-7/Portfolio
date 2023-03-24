@@ -23,9 +23,9 @@ export default function About() {
 
   return (
     <div className="w-full h-full max-w-[100vw] min-h-screen bg-default_Black flex justify-center
-    items-center-center">
+    items-center-center pb-16">
       <main
-        className="w-4/5 py-10 px-10 gap-28 flex flex-wrap justify-center items-center
+        className="md:w-4/5 py-10 px-10 gap-28 flex flex-wrap justify-center items-center
         animate-iniciation translate-x-3"
       >
         <CardProject

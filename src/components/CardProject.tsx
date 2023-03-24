@@ -15,23 +15,20 @@ interface InfoCard {
 }
 
 export default function CardProject(infoCard: InfoCard) {
-  const [animated, setAnimated] = useState<string>('none');
   return (
     <article
-      onMouseEnter={ () => setAnimated('bounce')}
-      onMouseLeave={ () => setAnimated('none')}
-      className="w-[500px] h-[316px] border-2 flex flex-col
-      border-default_Purple shadow-default_Shadow pt-7 pl-7 rounded-lg justify-between"
+      className="w-full min-h-[450px] md:w-[500px] md:min-h-[316px] border-2 flex flex-col
+      border-default_Purple shadow-default_Shadow md:pt-7 md:pl-7 rounded-lg justify-around md:justify-between"
     >
       <div>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row md:justify-between items-center text-center">
           <h1 className="text-default_White text-[2.50rem]">
             { infoCard.title || '' }
             {' '}
             <span className={ infoCard.contrastColor }>{ infoCard.contrastTitle }</span>
           </h1>
 
-          <div className="flex items-center mr-10 gap-5">
+          <div className="flex items-center md:mr-10 gap-10 md:gap-5 self-center">
             <a
               href={ infoCard.linkGithub }
               target="_blank"
@@ -58,15 +55,15 @@ export default function CardProject(infoCard: InfoCard) {
         </div>
 
         <p
-          className="text-default_White opacity-80 w-3/5 text-justify
-          ml-12 mt-3"
+          className="text-default_White opacity-80 md:w-3/5 text-justify
+          md:ml-12 mt-3 p-4 md:p-0"
         >
           {infoCard.content}
         </p>
       </div>
 
-      <div className="flex w-full justify-between mb-4">
-        <div className="flex ml-7 w-3/5 gap-2">
+      <div className="flex flex-col gap-4 md:gap-0 md:flex-row w-full justify-between md:mb-4">
+        <div className="flex ml-4 md:ml-7 w-3/5 gap-2">
           {
             infoCard.hardSkills.map((image, idx) => (
               <img
@@ -82,7 +79,7 @@ export default function CardProject(infoCard: InfoCard) {
         <img
           src={infoCard.logo}
           alt={`Logo do ${infoCard.contrastTitle}`}
-          className={`transform mr-6 w-16 animate-${animated}`}
+          className="transform mr-6 w-16 self-end"
         />
       </div>
     </article>

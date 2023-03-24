@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 import GoBackHome from "../../components/GoBackHome";
 
@@ -8,6 +8,11 @@ import {
 }from '../../images';
 
 export default function ContactMe() {
+  const [name, setName] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [subject, setSubject] = useState<string>('')
+  const [content, setContent] = useState<string>('')
+
   useEffect(() => {
     document.title = 'Contact Me ';
   }, []);
@@ -18,7 +23,7 @@ export default function ContactMe() {
       <form
         action="https://formsubmit.co/viniciusgsa99@gmail.com"
         method="post"
-        className="flex flex-col min-h-1/2 w-96 p-9 gap-7 animate-iniciation"
+        className="flex flex-col min-h-1/2 w-80 md:w-96 p-9 gap-7 animate-iniciation translate-y-6"
       >
         <div className="flex justify-evenly">
           <img
@@ -44,32 +49,48 @@ export default function ContactMe() {
 
         <input
           type="text"
-          placeholder="Nome"
-          className="p-1 rounded-md bg-default_White text-center"
+          name="name"
+          placeholder="*Nome"
+          className="p-1 rounded-md bg-default_White text-center outline-none"
+          onChange={({target}) => setName(target.value)}
+          value={name}
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="*E-mail"
+          className="p-1 rounded-md bg-default_White text-center outline-none"
+          onChange={({target}) => setEmail(target.value)}
+          value={email}
         />
 
         <input
           type="text"
-          placeholder="E-mail"
-          className="p-1 rounded-md bg-default_White text-center"
-        />
-
-        <input
-          type="text"
+          name="_subject"
           placeholder="Assunto"
-          className="p-1 rounded-md bg-default_White text-center"
+          className="p-1 rounded-md bg-default_White text-center outline-none"
+          onChange={({target}) => setSubject(target.value)}
+          value={subject}
         />
 
         <textarea
           rows={5}
-          placeholder="Conteúdo"
-          className="rounded-md bg-default_White text-center"
+          placeholder="*Conteúdo"
+          name="content"
+          className="rounded-md bg-default_White text-center outline-none"
+          onChange={({target}) => setContent(target.value)}
+          value={content}
         />
 
         <button
           type="submit"
-          className="border-2 border-default_Purple transition-opacity duration-300 opacity-70
-          rounded-md hover:opacity-100 h-9 w-3/4 self-center font-bold text-default_White"
+          disabled={
+            name && email &&
+            content ? false : true}
+          className="border-2 border-default_Purple transition-opacity
+          duration-300 opacity-70 rounded-md hover:opacity-100 h-9 w-3/4
+          self-center font-bold text-default_White disabled:opacity-50"
         >
           Enviar
         </button>

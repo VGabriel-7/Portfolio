@@ -30,14 +30,15 @@ export default function Home() {
       <AnimationIcons />
 
       <main className="flex z-10 flex-col items-center justify-start w-1/2 h-4/5
-      gap-10 animate-iniciation translate-y-6">
+      gap-10 animate-iniciation translate-y-6 pt-7 pb-7">
         {/* Main Content */}
         <section>
-          <div className="flex flex-col items-center justify-center gap-6">
+          <div className="flex flex-col items-center
+          justify-center gap-6">
             {/* Background for my profile image */}
             <Profile />
             {/* Title with my Name */}
-            <h1 className="text-5xl text-default_White">Vinícius Gabriel</h1>
+            <h1 className="text-5xl text-center text-default_White">Vinícius Gabriel</h1>
           </div>
         </section>
 
@@ -45,7 +46,8 @@ export default function Home() {
         <nav
           className="max-w-[400px] flex text-default_White justify-center"
         >
-          <div className="flex gap-7 flex-wrap justify-between">
+          <div className="flex gap-7 flex-wrap justify-center
+          md:justify-between">
             <button
               type="button"
               className={ styledButton }
@@ -92,9 +94,9 @@ export default function Home() {
 
             <button
               type="button"
-              className="transition ease-in min-w-[140px] border-2 border-default_Purple
+              className="transition w-[180px] md:flex-grow ease-in border-2 border-default_Purple
               border-opacity-20 rounded-md h-12 hover:border-opacity-100 active:translate-x-[2px]
-              active:translate-y-[2px] active:duration-75 flex-grow"
+              active:translate-y-[2px] active:duration-75 flex-grow-0"
               onClick={ () => nav('/contact-me') }
             >
               Contact Me
