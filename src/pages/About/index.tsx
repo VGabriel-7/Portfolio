@@ -27,7 +27,12 @@ export default function About() {
         <ArticleAboutMe
           title='Vida pessoal'
         >
-          Nasci em Olindina, uma cidade do interior da Bahia, onde moro
+          Nasci em 
+          <a
+            href="https://www.google.com.br/maps/place/Olindina"
+            target="_blank"
+            className="text-blue-600 hover:underline"
+          > Olindina</a>, uma cidade do interior da Bahia, onde moro
           atualmente, sou adventista do sétimo dia, gosto muito de jogar
           futebol, nadar, andar de skate e amo programação.
           Com 15 anos conheci a programação atráves
