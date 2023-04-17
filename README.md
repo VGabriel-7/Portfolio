@@ -26,3 +26,14 @@
  
   5. Segurando CTRL click no link que está no terminal:
      - `➜  Local:   http://localhost:5173/`
+    
+##
+
+<strong>Técnologias utilizadas</strong><br />
+  1. Bibliotecas
+      - <strong><a href="https://react.dev/" target="_blanck">React</a></strong>
+      - <strong><a href="https://tailwindcss.com/docs/installation" target="_blanck">Tailwind</a></strong>
+  2. Ferramentas
+      - <strong><a href="https://vitejs.dev/" target="_blanck">Vite</a></strong>
+      - <strong><a href="https://www.figma.com/file/yvSgljcmIuS5cyqcLvTQBf/Portfolio?node-id=0-1&t=BGp5tuSjOsNDOtNo-0" target="_blanck">Figma</a></strong>
+      
