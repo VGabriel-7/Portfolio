@@ -1,13 +1,9 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 
-import imageProfile from '../../images/imageProfile.jpg';
 import logoLinkedin from '../../images/logoLinkedin.svg';
 import logoGithub from '../../images/logoGithub.svg';
 
-import {
-  react
-} from '../../images';
 import AnimationIcons from '../../components/AnimationIcons';
 import Profile from '../../components/Profile';
 
